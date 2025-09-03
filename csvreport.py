@@ -2,7 +2,7 @@ import csv
 
 def read_sales(file_path):
     sales = []
-    with open(file_path, newline='') as csvfile:
+    with open(file_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             row['amount'] = float(row['amount'])
