@@ -15,7 +15,7 @@ def generate_report(sales):
     by_product = {}
     for s in sales:
         by_product[s['product']] = by_product.get(s['product'], 0) + s['amount']
-    for product, amount in by_product.items():
+    for product, amount in sorted(by_product.items()):
         print(f"{product}: ${amount:.2f}")
 
 if __name__ == "__main__":
