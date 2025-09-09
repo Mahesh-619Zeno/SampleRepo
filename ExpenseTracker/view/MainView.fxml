@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ExpenseController" spacing="10" padding="15">
+
+    <HBox spacing="10">
+        <TextField fx:id="categoryInput" promptText="Category" />
+        <TextField fx:id="amountInput" promptText="Amount" />
+        <DatePicker fx:id="dateInput" />
+        <Button text="Add" onAction="#handleAddExpense" />
+    </HBox>
+
+    <TableView fx:id="expenseTable">
+        <columns>
+            <TableColumn fx:id="categoryColumn" text="Category" />
+            <TableColumn fx:id="amountColumn" text="Amount" />
+            <TableColumn fx:id="dateColumn" text="Date" />
+        </columns>
+    </TableView>
+
+    <Button text="Delete Selected" onAction="#handleDeleteExpense" />
+</VBox>
